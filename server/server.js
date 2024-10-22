@@ -14,7 +14,6 @@ const shopSearchRouter = require("./routes/shop/search-routes");
 const shopReviewRouter = require("./routes/shop/review-routes");
 const shopPrescriptionRouter = require("./routes/shop/prescription-routes"); // Add this line
 
-
 const commonFeatureRouter = require("./routes/common/feature-routes");
 
 //create a database connection -> u can also
@@ -28,20 +27,7 @@ mongoose
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "DELETE", "PUT","PATCH"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Cache-Control",
-      "Expires",
-      "Pragma",
-    ],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(cookieParser());
 app.use(express.json());
@@ -57,7 +43,8 @@ app.use("/api/shop/search", shopSearchRouter);
 app.use("/api/shop/review", shopReviewRouter);
 app.use("/api/shop/prescription", shopPrescriptionRouter); // Add this line
 
-
 app.use("/api/common/feature", commonFeatureRouter);
 
-app.listen(PORT, "0.0.0.0",() => console.log(`Server is now running on port ${PORT}`));
+app.listen(PORT, "0.0.0.0", () =>
+  console.log(`Server is now running on port ${PORT}`)
+);
