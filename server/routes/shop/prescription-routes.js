@@ -10,11 +10,15 @@ const { authMiddleware } = require("../../controllers/auth/auth-controller");
 const router = express.Router();
 
 router.post(
-  "/upload",
+  "/upload",authMiddleware,
   upload.single("prescriptionImage"),
   handlePrescriptionUpload
 );
-router.get("/get/:id", getPrescriptions);
-router.put("/update-status/:id", updatePrescriptionStatus);
+router.get("/get",authMiddleware, getPrescriptions);
+router.patch(
+  "/update-status/:prescriptionId",
+  authMiddleware,
+  updatePrescriptionStatus
+);
 
 module.exports = router;

@@ -16,7 +16,9 @@ import axios from "axios";
 import { useToast } from "@/components/ui/use-toast";
 
 const PrescriptionCheckoutDialog = () => {
-    const userID = JSON.parse(localStorage.getItem("userInfo"))._id || "";
+
+     const userID = JSON.parse(localStorage.getItem("userInfo"))?._id || "";
+ 
     console.log({ userID});
     
     const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +67,7 @@ const PrescriptionCheckoutDialog = () => {
           headers: {
             "Content-Type": "multipart/form-data",              
           },
+          withCredentials: true,
         }
       );
 
@@ -221,7 +224,7 @@ const PrescriptionCheckoutDialog = () => {
                 className="bg-black text-white hover:bg-gray-800"
                 disabled={isLoading}
               >
-                {isLoading ? "Submitting..." : "Submit"}
+                {isLoading ? "Ordering..." : "Order"}
               </Button>
             </SheetFooter>
           </form>

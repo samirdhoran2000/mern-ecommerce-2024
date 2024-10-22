@@ -22,6 +22,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import PaypalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
 import SearchProducts from "./pages/shopping-view/search";
+import OrderWithPrescription from "./components/admin-view/orders-with-prescription";
+import Footer from "./components/common/footer";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useSelector(
@@ -72,6 +74,10 @@ function App() {
           <Route path="dashboard" element={<AdminOrders />} />
           <Route path="products" element={<AdminProducts />} />
           <Route path="orders" element={<AdminOrders />} />
+          <Route
+            path="ordersWithPrescriptions"
+            element={<OrderWithPrescription />}
+          />
           <Route path="features" element={<AdminFeatures />} />
         </Route>
         <Route
@@ -93,6 +99,8 @@ function App() {
         <Route path="/unauth-page" element={<UnauthPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
