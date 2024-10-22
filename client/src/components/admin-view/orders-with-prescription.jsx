@@ -39,7 +39,7 @@ function AdminPrescriptionOrdersView() {
   async function fetchPrescriptionOrders() {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/shop/prescription/get`,
+        `${import.meta.env.VITE_API_URL}/api/shop/prescription/get`,
         {
           withCredentials: true,
         }
@@ -64,7 +64,9 @@ function AdminPrescriptionOrdersView() {
 
     try {
       const response = await axios.patch(
-        `http://localhost:5000/api/shop/prescription/update-status/${selectedOrder._id}`,
+        `${import.meta.env.VITE_API_URL}/api/shop/prescription/update-status/${
+          selectedOrder._id
+        }`,
         { status: newStatus },
         { withCredentials: true }
       );
