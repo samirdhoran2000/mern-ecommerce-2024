@@ -28,6 +28,18 @@ mongoose
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "http://13.202.214.198:5173");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
+
+
 const corsOptions = {
   origin: "http://13.202.214.198:5173",
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
