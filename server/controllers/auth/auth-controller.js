@@ -64,7 +64,7 @@ const loginUser = async (req, res) => {
         email: checkUser.email,
         userName: checkUser.userName,
       },
-      process.env.CLIENT_SECRET,
+      process.env.JWT_SECRET,
       { expiresIn: "60m" }
     );
 
@@ -106,7 +106,7 @@ const authMiddleware = async (req, res, next) => {
     });
 
   try {
-    const decoded = jwt.verify(token, process.env.CLIENT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
     next();
   } catch (error) {
