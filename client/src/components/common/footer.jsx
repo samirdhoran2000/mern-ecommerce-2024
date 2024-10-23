@@ -1,15 +1,16 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white p-4 sm:p-6 lg:p-8">
+    <footer className="bg-gray-900 text-white p-4 sm:p-6 lg:p-8" id="footer">
       <div className="container mx-auto">
         {/* Use grid for column layout on mobile/tablet and row layout on larger screens */}
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
           {/* First Section: Brand Info */}
           <div className="text-center sm:text-center lg:text-left">
-            <h3 className="text-xl font-bold mb-4">MediCare</h3>
+            <h3 className="text-xl font-bold mb-4">Pharmzy</h3>
             <p className="text-sm sm:text-base">
               Your trusted medical supply store since 1995.
             </p>
@@ -20,37 +21,37 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm sm:text-base">
               <li>
-                <a
-                  href="#"
+                 <Link
+                  to="/"
                   className="hover:text-gray-300 transition-colors duration-200"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                 <Link
+                  to="/shop/listing"
                   className="hover:text-gray-300 transition-colors duration-200"
                 >
                   Products
-                </a>
+                </Link>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#footer"
                   className="hover:text-gray-300 transition-colors duration-200"
                 >
                   About Us
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="hover:text-gray-300 transition-colors duration-200"
                 >
                   Contact
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -60,15 +61,15 @@ const Footer = () => {
             <ul className="space-y-2 text-sm sm:text-base">
               <li className="flex items-center justify-center lg:justify-start">
                 <Phone className="h-5 w-5 mr-2" />
-                <span>+1 (123) 456-7890</span>
+                <span>+91 9322403019</span>
               </li>
               <li className="flex items-center justify-center lg:justify-start">
                 <Mail className="h-5 w-5 mr-2" />
-                <span>info@medicare.com</span>
+                <span>pharmzy99@gmail.com</span>
               </li>
               <li className="flex items-center justify-center lg:justify-start">
                 <MapPin className="h-5 w-5 mr-2" />
-                <span>123 Medical St, Health City, HC 12345</span>
+                <span>Malkapur Buldhana 443102</span>
               </li>
             </ul>
           </div>
@@ -78,11 +79,14 @@ const Footer = () => {
       {/* Footer bottom area */}
       <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
         <p>
-          &copy; 2024 MediCare. All rights reserved.
+          &copy; 2024 Pharmzy. All rights reserved.
           <span className="block sm:inline">
             {" "}
             Website developed by{" "}
-            <a href="https://www.techamica.com" className="text-blue-500 hover:text-blue-400">
+            <a
+              href="https://www.techamica.com"
+              className="text-blue-500 hover:text-blue-400"
+            >
               TechAmica IT Solutions
             </a>
             .
