@@ -29,7 +29,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://13.202.214.198:5173");
+  // res.header("Access-Control-Allow-Origin", "http://13.202.214.198:5173");
+  res.header("Access-Control-Allow-Origin", `${process.env.VITE_API_URL}`);
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
@@ -41,7 +42,7 @@ app.use((req, res, next) => {
 
 
 const corsOptions = {
-  origin: "http://13.202.214.198:5173",
+  origin: `${process.env.VITE_API_URL}`,
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
   allowedHeaders: [
     "Content-Type",
