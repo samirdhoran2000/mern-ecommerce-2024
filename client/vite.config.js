@@ -8,6 +8,9 @@ export default defineConfig({
     // port: 4000,
     host: true,
   },
+  optimizeDeps: {
+    include: ['lucide-react']
+  },
   plugins: [react()],
   resolve: {
     alias: {
