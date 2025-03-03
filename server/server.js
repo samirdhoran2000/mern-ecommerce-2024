@@ -42,7 +42,7 @@ app.use((req, res, next) => {
 
 
 const corsOptions = {
-  origin: `${process.env.VITE_API_URL}`,
+  origin: `*`,
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
   allowedHeaders: [
     "Content-Type",
