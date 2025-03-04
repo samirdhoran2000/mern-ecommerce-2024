@@ -44,12 +44,12 @@ const categoriesWithIcon = [
 ];
 
 const brandsWithIcon = [
-  { id: "nike", label: "Nike", icon: Shirt },
-  { id: "adidas", label: "Adidas", icon: WashingMachine },
-  { id: "puma", label: "Puma", icon: ShoppingBasket },
-  { id: "levi", label: "Levi's", icon: Airplay },
-  { id: "zara", label: "Zara", icon: Images },
-  { id: "h&m", label: "H&M", icon: Heater },
+  { id: "sunPhara", label: "Sun Phara", icon: Shirt },
+  { id: "drReaddyLab", label: "Dr. Readdy Lab", icon: WashingMachine },
+  { id: "lupin", label: "Lupin", icon: ShoppingBasket },
+  { id: "cipla", label: "Cipla", icon: Airplay },
+  { id: "aurobindoPharma", label: "Aurobindo Pharma", icon: Images },
+  { id: "torrent", label: "Torrent", icon: Heater },
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);

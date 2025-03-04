@@ -70,12 +70,12 @@ export const addProductFormElements = [
     name: "brand",
     componentType: "select",
     options: [
-      { id: "nike", label: "Nike" },
-      { id: "adidas", label: "Adidas" },
-      { id: "puma", label: "Puma" },
-      { id: "levi", label: "Levi's" },
-      { id: "zara", label: "Zara" },
-      { id: "h&m", label: "H&M" },
+      { id: "sunPhara", label: "Sun Phara" },
+      { id: "drReaddyLab", label: "Dr. Readdy Lab" },
+      { id: "lupin", label: "Lupin" },
+      { id: "cipla", label: "Cipla" },
+      { id: "aurobindoPharma", label: "Aurobindo Pharma" },
+      { id: "torrent", label: "Torrent" },
     ],
   },
   {
@@ -153,12 +153,12 @@ export const categoryOptionsMap = {
 };
 
 export const brandOptionsMap = {
-  nike: "Nike",
-  adidas: "Adidas",
-  puma: "Puma",
-  levi: "Levi",
-  zara: "Zara",
-  "h&m": "H&M",
+  sunPhara: "Sun Pharmaceutical",
+  drReaddyLab: "Dr. Reddy's Laboratories",
+  lupin: "Lupin",
+  cipla: "Cipla",
+  aurobindoPharma: "Aurobindo Pharma",
+  torrent: "Torrent Pharmaceuticals",
 };
 
 export const filterOptions = {
@@ -170,12 +170,12 @@ export const filterOptions = {
     // { id: "footwear", label: "Footwear" },
   ],
   brand: [
-    { id: "nike", label: "Nike" },
-    { id: "adidas", label: "Adidas" },
-    { id: "puma", label: "Puma" },
-    { id: "levi", label: "Levi's" },
-    { id: "zara", label: "Zara" },
-    { id: "h&m", label: "H&M" },
+    { id: "sunPhara", label: "Sun Phara" },
+    { id: "drReaddyLab", label: "Dr. Readdy Lab" },
+    { id: "lupin", label: "Lupin" },
+    { id: "cipla", label: "Cipla" },
+    { id: "aurobindoPharma", label: "Aurobindo Pharma" },
+    { id: "torrent", label: "Torrent" },
   ],
 };
 
